@@ -57,8 +57,8 @@ func handleRequests() {
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/articles", articles)
 	http.HandleFunc("/articles/search", search)
-	http.HandleFunc("/articles/{id}", getArticle)
-	http.ListenAndServe(":27017", nil)
+	http.HandleFunc("/article/{id}", getArticle)
+	http.ListenAndServe(":12345", nil)
 }
 
 func main() {
